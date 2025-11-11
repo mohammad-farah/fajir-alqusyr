@@ -372,23 +372,6 @@ nav div:nth-child(3) {
 }
 
 
-.gallery-2 img {
-    opacity: 0.2;
-    /* filter: grayscale(1); */
-    transition: 0.5s;
-}
-
-.gallery-2 div img:hover {
-    opacity: 1;
-    filter: grayscale(0);
-    transition: 0.5s;
-}
-
-.gallery-2 {
-    height: 30vh;
-}
-
-
 
 @media (max-width: 768px) {
     .gallery-wrapper {
@@ -481,7 +464,7 @@ nav div:nth-child(3) {
     justify-content: center;
     width: 30%;
     padding: 2%;
-    height: 300px;
+    height: 350px;
     text-align: center;
     /* border: 2px dashed var(--light-secondary-color); */
     background-color: #000d8023;
@@ -659,7 +642,7 @@ nav div:nth-child(3) {
 
 .copy-btn {
     padding: 8px 14px;
-    background: white;
+    background: #000d804b;
     border-radius: 6px;
     border: solid 1px var(--darkred-color);
     cursor: pointer;
