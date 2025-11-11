@@ -134,7 +134,7 @@ nav div:nth-child(3) {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 10vh;
+        height: 7vh;
         padding: 3% 10%;
         overflow: hidden;
         transition: height 0.3s ease-in-out;
@@ -145,6 +145,8 @@ nav div:nth-child(3) {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        height: 100%;
+        background-color: red;
     }
 
     nav div:nth-child(2),
@@ -597,9 +599,9 @@ nav div:nth-child(3) {
 
 .payment-methods div button {
     margin-top: 2vh;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 1.5rem;
     font-size: 1rem;
-    width: 100%;
+    width: auto ;
     color: var(--primary-color);
     font-weight: bolder;
     border: solid 2px var(--primary-color);
