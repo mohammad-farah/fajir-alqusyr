@@ -408,11 +408,8 @@ nav div:nth-child(3) {
 /* EXTRA INFORMATIONS */
 
 .info-section {
-    background: white;
-    /* background: radial-gradient(circle, rgba(253, 187, 45, 0.179) 0%, rgba(254, 248, 226, 1) 42%, rgba(253, 187, 45, 0) 63%); */
-    /* background-color: var(--secondary-color); */
     padding: 7% 10% 5% 15%;
-    margin-top: 0vh;
+    margin: 0px;
 }
 
 .extra-info {
@@ -448,6 +445,7 @@ nav div:nth-child(3) {
 
     .info-section {
         padding: auto 0;
+        margin: 0px !important;
     }
 }
 
