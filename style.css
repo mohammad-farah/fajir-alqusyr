@@ -145,8 +145,7 @@ nav div:nth-child(3) {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        height: 100%;
-        background-color: red;
+        height: auto;
     }
 
     nav div:nth-child(2),
