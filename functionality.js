@@ -88,7 +88,7 @@ function copyText(btn) {
     btnImg.src = "./assets/icons/check.png";
 
     setTimeout(() => {
-      btnText.textContent = "انسخ كود الدفع";
+      btnText.textContent = "انسخ كود ";
       btnText.style.color = "var(--darkred-color)";
       btnImg.src = "./assets/imgs/copy.png";
       btn.style.border = "1px solid var(--darkred-color)";
