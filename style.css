@@ -392,7 +392,7 @@ nav div:nth-child(3) {
 @media (max-width: 768px) {
     .gallery-wrapper {
         height: 30vh;
-        margin-top: 20vh;
+        margin-top: 10vh;
     }
 
     .gallery-2 {
@@ -412,7 +412,7 @@ nav div:nth-child(3) {
     /* background: radial-gradient(circle, rgba(253, 187, 45, 0.179) 0%, rgba(254, 248, 226, 1) 42%, rgba(253, 187, 45, 0) 63%); */
     /* background-color: var(--secondary-color); */
     padding: 7% 10% 5% 15%;
-    margin-top: -5vh;
+    margin-top: 0vh;
 }
 
 .extra-info {
@@ -444,6 +444,10 @@ nav div:nth-child(3) {
 @media (max-width: 768px) {
     .extra-info {
         padding: 5vh 0;
+    }
+
+    .info-section {
+        padding: auto 0;
     }
 }
 
@@ -678,11 +682,11 @@ nav div:nth-child(3) {
     }
 
     .payment-methods .method {
-        width: 70%;
+        width: 80%;
     }
 
     .pop-up {
-        width: 70vw;
+        width: 75vw;
         height: 70vw;
         margin: 0 auto;
         box-shadow: 1px 1px 5px #ffffff;
