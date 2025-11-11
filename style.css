@@ -642,9 +642,9 @@ nav div:nth-child(3) {
 
 .copy-btn {
     padding: 8px 14px;
-    background: #000d804b;
+    background: white;
     border-radius: 6px;
-    border: solid 1px var(--darkred-color);
+    border: solid 1px white;
     cursor: pointer;
     transition: 0.3s;
 }

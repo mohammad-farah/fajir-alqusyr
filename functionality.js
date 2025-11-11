@@ -91,7 +91,7 @@ function copyText(btn) {
       btnText.textContent = "انسخ كود ";
       btnText.style.color = "var(--darkred-color)";
       btnImg.src = "./assets/imgs/copy.png";
-      btn.style.border = "1px solid var(--darkred-color)";
+      btn.style.border = "1px solid white";
 
       popUp.style.opacity = "0";
       popUp.style.transition = "0.5s";
