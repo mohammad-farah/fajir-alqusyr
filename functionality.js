@@ -11,14 +11,12 @@ const socialMedia = divs[2];
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 const toggleNavbar = () => {
-    if (!isMobile) return;
+  if (!isMobile) return;
 
-    navBtn.classList.toggle("rotate-btn");
-    nav.classList.toggle("nav-open-container");
-    links.classList.toggle("nav-open-item");
-    socialMedia.classList.toggle("nav-open-item");
-
-    
+  navBtn.classList.toggle("rotate-btn");
+  nav.classList.toggle("nav-open-container");
+  links.classList.toggle("nav-open-item");
+  socialMedia.classList.toggle("nav-open-item");
 };
 
 navBtn.addEventListener("click", toggleNavbar);
@@ -27,43 +25,41 @@ navBtn.addEventListener("click", toggleNavbar);
    GALLERY (INFINITE AUTO-SCROLL)
    ============================================================ */
 
-
-   const gallery = document.querySelector('.gallery');
-const galleryItems = document.querySelectorAll('.gallery-item');
+const gallery = document.querySelector(".gallery");
+const galleryItems = document.querySelectorAll(".gallery-item");
 
 let currentIndex = 0;
 const totalItems = galleryItems.length;
 const scrollInterval = 3000; // time between auto scroll in ms
 
 function scrollGallery() {
-    currentIndex++;
+  currentIndex++;
 
-    if (currentIndex >= totalItems) {
-        // Loop back to start
-        gallery.scrollTo({ left: 0, behavior: 'smooth' });
-        currentIndex = 0;
-    } else {
-        const scrollLeft = galleryItems[currentIndex].offsetLeft - gallery.offsetLeft;
-        gallery.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-    }
+  if (currentIndex >= totalItems) {
+    // Loop back to start
+    gallery.scrollTo({ left: 0, behavior: "smooth" });
+    currentIndex = 0;
+  } else {
+    const scrollLeft =
+      galleryItems[currentIndex].offsetLeft - gallery.offsetLeft;
+    gallery.scrollTo({ left: scrollLeft, behavior: "smooth" });
+  }
 }
 
 // Auto scroll every 3 seconds
 let autoScroll = setInterval(scrollGallery, scrollInterval);
 
 // Optional: pause auto-scroll on hover
-gallery.addEventListener('mouseenter', () => clearInterval(autoScroll));
-gallery.addEventListener('mouseleave', () => {
-    autoScroll = setInterval(scrollGallery, scrollInterval);
+gallery.addEventListener("mouseenter", () => clearInterval(autoScroll));
+gallery.addEventListener("mouseleave", () => {
+  autoScroll = setInterval(scrollGallery, scrollInterval);
 });
 
 // Optional: enable mouse wheel horizontal scroll on hover
-gallery.addEventListener('wheel', (e) => {
-    e.preventDefault();
-    gallery.scrollLeft += e.deltaY;
+gallery.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  gallery.scrollLeft += e.deltaY;
 });
-
-
 
 /* ============================================================
    PAYMENT POPUPS
@@ -96,16 +92,19 @@ function copyText(btn) {
 
   // Try modern clipboard API
   if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => {
-      if (btnImg) btnImg.src = "./assets/icons/check.png";
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        if (btnImg) btnImg.src = "./assets/icons/check.png";
 
-      setTimeout(() => {
-        if (btnImg) btnImg.src = "./assets/imgs/copy.png";
-        hidePopup(popUp);
-      }, 1000);
-    }).catch(err => {
-      fallbackCopy(text, btnImg, popUp);
-    });
+        setTimeout(() => {
+          if (btnImg) btnImg.src = "./assets/imgs/copy.png";
+          hidePopup(popUp);
+        }, 1000);
+      })
+      .catch((err) => {
+        fallbackCopy(text, btnImg, popUp);
+      });
   } else {
     fallbackCopy(text, btnImg, popUp);
   }
@@ -140,4 +139,56 @@ function hidePopup(popUp) {
   }, 500);
 }
 
+/* ============================================================
+   GSAP
+   ============================================================ */
 
+gsap.registerPlugin(ScrollTrigger);
+
+// donation btn
+
+gsap.from(".donation-btn", {
+  x: -250,
+  duration: 0.5,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#donation-btn-trigger",
+    start: "center center",
+    toggleActions: "play none none none"
+  }
+});
+
+
+// payment methods 
+if (isMobile) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const goals = gsap.utils.toArray(".goal");
+
+  goals.forEach((goal) => {
+    const stat = goal.querySelector(".statistics");
+    const target = parseInt(stat.textContent);
+
+    // Reset number to zero initially
+    stat.textContent = 0;
+
+    gsap.from(goal, {
+      opacity: 0,
+      x: -400,
+      duration: 0.6,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: goal,
+        start: "center bottom",
+        onEnter: () => {
+          gsap.to(stat, {
+            innerText: target,
+            duration: 1,
+            snap: { innerText: 1 },
+            ease: "power1.out",
+          });
+        },
+      },
+    });
+  });
+}

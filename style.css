@@ -404,6 +404,10 @@ nav div:nth-child(3) {
     font-weight: lighter;
 }
 
+.extra-info p {
+    text-align: justify;
+}
+
 
 
 .extra-info h1:nth-child(2) {
@@ -586,7 +590,7 @@ nav div:nth-child(3) {
     width: 30%;
     padding: 3%;
     margin: 2vh;
-    box-shadow: 0px 0px 5px #000d8060;
+    box-shadow: 0px 0px 5px #000d80de;
     background-color: #E8BF66;
     border-radius: 10px;
     transition: 0.5s;
@@ -602,13 +606,13 @@ nav div:nth-child(3) {
     padding: 0.2rem 1.5rem;
     font-size: 1rem;
     width: auto;
-    color: var(--primary-color);
+    color: white;
     font-weight: bolder;
     border: solid 1px var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
-    background-color: transparent;
+    background-color: var(--primary-color);
 }
 
 .payment-methods div button:hover {
@@ -652,6 +656,7 @@ nav div:nth-child(3) {
     cursor: pointer;
     transition: 0.3s;
     padding: 4% !important;
+    background-color: var(--secondary-color) !important;
 }
 
 .copy-btn:hover {
