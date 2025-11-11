@@ -434,7 +434,6 @@ nav div:nth-child(3) {
 
 
 .extra-info>p strong {
-    /* font-style: italic; */
     color: var(--darkred-color);
     font-size: 2rem;
 }
