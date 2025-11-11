@@ -109,6 +109,11 @@
           <!-- Original images -->
           <img
             class="gallery-item"
+            src="./assets/imgs/gallery-2/4.jpeg"
+            alt=""
+          />
+          <img
+            class="gallery-item"
             src="./assets/imgs/gallery-2/1.jpeg"
             alt=""
           />
@@ -120,40 +125,9 @@
           <img
             class="gallery-item"
             src="./assets/imgs/gallery-2/3.jpeg"
-            alt=""
-          />
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/4.jpeg"
-            alt=""
-          />
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/5.png"
             alt=""
           />
 
-          <!-- ✅ Duplicated images for infinite scrolling -->
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/1.jpeg"
-            alt=""
-          />
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/2.jpeg"
-            alt=""
-          />
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/3.jpeg"
-            alt=""
-          />
-          <img
-            class="gallery-item"
-            src="./assets/imgs/gallery-2/4.jpeg"
-            alt=""
-          />
           <img
             class="gallery-item"
             src="./assets/imgs/gallery-2/5.png"
@@ -172,7 +146,8 @@
           <h2>تأهيل البنى التحتية</h2>
           <h3>
             <br />
-            <strong>%</strong><strong class="statistics">70</strong> <br />
+            <strong>%</strong><strong class="statistics">70</strong>
+            <br /><br />
             من البنى التحتية مدمرة
           </h3>
           <p class="institutes">(كهرباء - مياه - صرف صحي- طرقات و جسور)</p>
@@ -187,7 +162,7 @@
           <h2>تأهيل القطاع الصحي</h2>
           <h3>
             <br /><strong>+</strong><strong class="statistics">40</strong>
-            <br />
+            <br /><br />
             منطقة تفتقد الخدمات الطبية
           </h3>
           <p class="institutes">(مستشفيات - مراكز صحية)</p>
@@ -203,7 +178,7 @@
           <h2>تأهيل القطاع التعليمي</h2>
           <h3>
             <br /><strong>+</strong><strong class="statistics">24</strong>
-            <br />
+            <br /><br />
             منشأة بحاجة للترميم و التجهيز
           </h3>
           <p class="institutes">( المدارس )</p>
@@ -219,7 +194,7 @@
           <h3>
             <br />
             <strong>+</strong>
-            <strong class="statistics">24</strong> <br />
+            <strong class="statistics">24</strong><br /><br />
             منشأة بحاجة للترميم و التجهيز
           </h3>
           <p class="institutes">(أراضي - آبار - قنوات ري)</p>
@@ -237,7 +212,7 @@
           <h3>
             <br />
             <strong>+</strong>
-            <strong class="statistics">24</strong> <br />
+            <strong class="statistics">24</strong> <br /><br />
             مركز ديني بحاجة لترميم و التجهيز
           </h3>
           <p class="institutes">(مساجد - مدارس تعليم شرعي)</p>
@@ -271,10 +246,9 @@
           <div class="pop-up">
             <img src="./assets/imgs/QR-Codes/shamcash-code.jpeg" alt="" />
             <div class="iban-copy">40acc7bb1fa36cb7f040749b9a5bc59d</div>
-            <div class="text-with-icon copy-btn" onclick="copyText(this)">
-              <p>كود الدفع</p>
+            <button class="copy-btn" onclick="copyText(this)">
               <img class="copy-icon" src="./assets/imgs/copy.png" alt="" />
-            </div>
+            </button>
           </div>
         </div>
         <div class="method moulham-team">
@@ -287,14 +261,20 @@
         <div class="method bank-deposit">
           <img src="./assets/imgs/bank.png" alt="" />
           <p>تحويل بنكي</p>
-          <button disabled onclick="showPopup(this)">اضغط للتبرع</button>
-          <div class="pop-up"></div>
+          <button  onclick="showPopup(this)">اضغط للتبرع</button>
+          <div class="pop-up">
+            <img src="./assets/imgs/QR-Codes/shamcash-code.jpeg" alt="" />
+            <div class="iban-copy">40acc7bb1fa36cb7f040749b9a5bc59d</div>
+            <button class="copy-btn" onclick="copyText(this)">
+              <img class="copy-icon" src="./assets/imgs/copy.png" alt="" />
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="footer">
-      <img class="logo" src="./assets/imgs/logo-white-print.png" alt="" />
+      <img class="logo" src="./assets/imgs/logo-white-print.png"  />
       <p>
         حملة تطوعية وطنية أطلقها أبناء القصير في الداخل و المغترب بهدف إعلدة
         الحياة إلى المنطقة بعد سنوات من المعاناة و الدمار الحملة مرخصة من قبل

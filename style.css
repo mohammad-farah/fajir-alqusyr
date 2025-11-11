@@ -72,7 +72,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 3;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.762);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -134,7 +134,7 @@ nav div:nth-child(3) {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 5vh;
+        height: 7vh;
         padding: 3% 10%;
         overflow: hidden;
         transition: height 0.3s ease-in-out;
@@ -172,6 +172,8 @@ nav div:nth-child(3) {
     nav div a {
         margin: 2vh;
         text-align: center;
+        font-weight: bolder;
+        font-size: 1.5rem;
     }
 
     .nav-btn {
@@ -198,7 +200,7 @@ nav div:nth-child(3) {
     color: white;
     font-weight: bolder;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     transition: 0.5s;
 }
 
@@ -309,6 +311,19 @@ nav div:nth-child(3) {
     .campign-history {
         justify-content: center;
     }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .date {
+    font-size: 1.5rem;
+    margin: 3vh 0 1vh 0 ;
+    }
+
+    .introduction-content {
+        margin: 5vh 0;
+    }
 }
 
 
@@ -317,21 +332,24 @@ nav div:nth-child(3) {
 
 .gallery-wrapper {
     width: 100%;
-    height: 30vh;
+    height: 70vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .gallery {
-    width: 60%;
+    width: 70%;
     height: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    box-shadow: inset #ffffff 1px 1px 10px;
+    border-radius: 5px;
 }
 
 .gallery::-webkit-scrollbar {
@@ -340,28 +358,28 @@ nav div:nth-child(3) {
 
 .gallery-track {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     height: 100%;
 }
 
 .gallery-item {
-    width: 100%;
+    width: 90%;
     flex-shrink: 0;
     height: 100%;
     object-fit: cover;
     scroll-snap-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
     .gallery-wrapper {
-        margin: 10vh auto;
+        margin: 3vh auto 0 auto;
         width: 100%;
-        height: 45vh;
+        height: 30vh;
     }
 
     .gallery {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
     }
 }
@@ -377,7 +395,7 @@ nav div:nth-child(3) {
 .extra-info {
     background: rgba(255, 255, 255, 0.641);
     backdrop-filter: blur(10px);
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 2.5%;
     color: var(--primary-color);
@@ -422,7 +440,7 @@ nav div:nth-child(3) {
     padding-top: 10vh;
 }
 
-.campign-vision h1 {
+.campign-vision h1:first-child {
     margin: 3vh;
     color: var(--darkred-color)
 }
@@ -442,9 +460,9 @@ nav div:nth-child(3) {
     justify-content: center;
     width: 30%;
     padding: 2%;
-    height: 350px;
+    height: 380px;
     text-align: center;
-    /* border: 2px dashed var(--light-secondary-color); */
+    border: 2px dashed var(--primary-color);
     background-color: #000d8023;
     border-radius: 10px;
     margin-top: 5vh;
@@ -454,6 +472,7 @@ nav div:nth-child(3) {
 .goal:hover {
     animation: breathAnimation 3s infinite linear;
 }
+
 
 @keyframes breathAnimation {
     0% {
@@ -498,9 +517,13 @@ nav div:nth-child(3) {
 
 @media (max-width: 768px) {
 
+    .campign-vision {
+        padding-top: 5vh;
+    }
+
+
     .info-section {
         padding: 5% 5%;
-        margin-top: -10vh;
     }
 
     .goals {
@@ -509,6 +532,11 @@ nav div:nth-child(3) {
 
     .goal {
         width: 90%;
+        margin-top: 0vh;
+    }
+
+    .goal:first-child {
+        margin-top: 5vh;
     }
 
 }
@@ -536,9 +564,9 @@ nav div:nth-child(3) {
 
 
 .payment .method p {
-    font-weight: bolder;
+    font-weight: bolder !important;
     color: var(--darkred-color);
-
+    font-size: 1.2rem;
 }
 
 
@@ -558,15 +586,15 @@ nav div:nth-child(3) {
     width: 30%;
     padding: 3%;
     margin: 2vh;
-    box-shadow: 1px 1px 5px #000d80a3;
-    background-color: #000d801a;
+    box-shadow: 0px 0px 5px #000d8060;
+    background-color: #E8BF66;
     border-radius: 10px;
     transition: 0.5s;
     position: relative;
 }
 
 .payment-methods div img {
-    width: 50%;
+    width: 40%;
 }
 
 .payment-methods div button {
@@ -576,17 +604,16 @@ nav div:nth-child(3) {
     width: auto;
     color: var(--primary-color);
     font-weight: bolder;
-    border: solid 2px var(--primary-color);
-    border-radius: 10px;
+    border: solid 1px var(--primary-color);
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
     background-color: transparent;
 }
 
 .payment-methods div button:hover {
-    background-color: var(--primary-color);
+    background-color: white;
     transition: 0.5s;
-    color: white;
 }
 
 .pop-up {
@@ -615,37 +642,56 @@ nav div:nth-child(3) {
 }
 
 .copy-btn {
-    padding: 8px 14px;
-    background: rgba(255, 255, 255, 0.744);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
     border-radius: 6px;
-    border: solid 1px white;
+    border: solid 1px black !important;
+    color: black !important;
     cursor: pointer;
     transition: 0.3s;
+    padding: 4% !important;
 }
 
 .copy-btn:hover {
-    background: white;
+    background: transparent !important;
+}
+
+.iban-copy {
+    margin: 2vh 0  0 0;
+    color: var(--darkred-color);
+    font-weight: bolder;
 }
 
 @media (max-width: 768px) {
     .payment {
-        margin: 30vh auto;
+        margin: 10vh auto;
     }
 
     .payment p {
-        width: 70% !important;
+        width: 90% !important;
     }
 
     .payment-methods .method {
-        width: 95%;
-        margin: 5vh auto;
+        width: 100%;
+        margin: 2vh auto;
     }
 
+    .payment-methods .method img {
+        margin: 3% 0;
+    }
+
+    .payment-methods .method button {
+        margin-bottom: 3vh;
+    }
+    
+
     .pop-up {
-        width: 75vw;
-        height: 70vw;
+        width: 90vw;
+        height: 75vw;
         margin: 0 auto;
-        box-shadow: 1px 1px 5px #ffffff;
+        box-shadow: 0px 0px 1px #ffffff;
     }
 }
 
@@ -660,8 +706,9 @@ nav div:nth-child(3) {
     font-weight: lighter;
 }
 
-.footer img {
-    width: 20px;
+.footer .logo {
+    width: 10%;
+    margin-top: 3vh;
 }
 
 .footer p {
@@ -709,4 +756,14 @@ nav div:nth-child(3) {
 .social-media .media img:hover {
     transform: scale(1.2);
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .footer p {
+        width: 90%;
+    }
+
+    .footer .logo {
+        width: 40%;
+    }
 }
