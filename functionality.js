@@ -26,31 +26,7 @@ navBtn.addEventListener("click", toggleNavbar);
    GALLERY (INFINITE AUTO-SCROLL)
    ============================================================ */
 
-const tracks = document.querySelectorAll(".gallery-track");
 
-tracks.forEach((track) => {
-  let x = 0;
-  const speed = 0.2;
-  let paused = false;
-
-  function animate() {
-    if (!paused) {
-      x -= speed;
-
-      const resetWidth = track.scrollWidth / 2;
-      if (Math.abs(x) >= resetWidth) x = 0;
-
-      track.style.transform = `translateX(${x}px)`;
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-
-  track.addEventListener("mouseenter", () => (paused = true));
-  track.addEventListener("mouseleave", () => (paused = false));
-});
 
 /* ============================================================
    PAYMENT POPUPS
