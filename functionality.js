@@ -150,11 +150,11 @@ gsap.registerPlugin(ScrollTrigger);
 if (isMobile) {
   gsap.from(".donation-btn", {
     x: -250,
-    duration: 0.5,
+    duration: 0.2,
     ease: "none",
     scrollTrigger: {
       trigger: "#donation-btn-trigger",
-      start: "center center",
+      start: "center bottom",
       toggleActions: "play none none none",
     },
   });
