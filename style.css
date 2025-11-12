@@ -79,7 +79,7 @@ nav {
     align-items: center;
     height: 10vh;
     gap: 2vw;
-    box-shadow: 1px 1px 1px var(--primary-color);
+    box-shadow: 1px 1px 5px #000d803d;
 }
 
 nav div {
@@ -125,7 +125,8 @@ nav div:nth-child(3) {
 
 .nav-btn {
     display: none;
-    height: 30px;
+    height: 20px;
+    margin: 0.8vh 0;
     transition: 0.1s;
 }
 
@@ -590,7 +591,7 @@ nav div:nth-child(3) {
     width: 30%;
     padding: 3%;
     margin: 2vh;
-    box-shadow: 0px 0px 10px #000d8069;
+    box-shadow: 0px 0px 5px #000d8069;
     background-color: #E8BF66;
     border-radius: 10px;
     transition: 0.5s;

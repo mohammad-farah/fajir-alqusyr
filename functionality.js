@@ -120,14 +120,14 @@ function fallbackCopy(text, btnImg, popUp) {
   textarea.select();
   try {
     document.execCommand("copy");
-    if (btnImg) btnImg.src = "./assets/icons/check.png";
+    if (btnImg) btnImg.src = "./assets/icons/copy.png";
   } catch (err) {
     alert("نسخ النص فشل! حاول مرة أخرى.");
   }
   document.body.removeChild(textarea);
 
   setTimeout(() => {
-    if (btnImg) btnImg.src = "./assets/imgs/copy.png";
+    if (btnImg) btnImg.src = "./assets/icons/copy.png";
     hidePopup(popUp);
   }, 1000);
 }
@@ -147,19 +147,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 // donation btn
 
-gsap.from(".donation-btn", {
-  x: -250,
-  duration: 0.5,
-  ease: "none",
-  scrollTrigger: {
-    trigger: "#donation-btn-trigger",
-    start: "center center",
-    toggleActions: "play none none none"
-  }
-});
+if (isMobile) {
+  gsap.from(".donation-btn", {
+    x: -250,
+    duration: 0.5,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#donation-btn-trigger",
+      start: "center center",
+      toggleActions: "play none none none",
+    },
+  });
+}
 
-
-// payment methods 
+// payment methods
 if (isMobile) {
   gsap.registerPlugin(ScrollTrigger);
 
