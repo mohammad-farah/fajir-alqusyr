@@ -95,10 +95,7 @@ function copyText(btn) {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        if (btnImg) btnImg.src = "./assets/icons/copy.png";
-
         setTimeout(() => {
-          if (btnImg) btnImg.src = "./assets/icons/copy.png";
           hidePopup(popUp);
         }, 1000);
       })
@@ -111,7 +108,7 @@ function copyText(btn) {
 }
 
 // Fallback for older browsers
-function fallbackCopy(text, btnImg, popUp) {
+function fallbackCopy(text, popUp) {
   const textarea = document.createElement("textarea");
   textarea.value = text;
   textarea.style.position = "fixed"; // avoid scrolling
@@ -120,14 +117,12 @@ function fallbackCopy(text, btnImg, popUp) {
   textarea.select();
   try {
     document.execCommand("copy");
-    if (btnImg) btnImg.src = "./assets/icons/copy.png";
   } catch (err) {
     alert("نسخ النص فشل! حاول مرة أخرى.");
   }
   document.body.removeChild(textarea);
 
   setTimeout(() => {
-    if (btnImg) btnImg.src = "./assets/icons/copy.png";
     hidePopup(popUp);
   }, 1000);
 }
