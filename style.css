@@ -620,6 +620,7 @@ nav div:nth-child(3) {
 .payment-methods div button:hover {
     background-color: white;
     transition: 0.5s;
+    color: var(--primary-color);
 }
 
 .pop-up {

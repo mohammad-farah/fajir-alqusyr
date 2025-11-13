@@ -95,7 +95,7 @@ function copyText(btn) {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        if (btnImg) btnImg.src = "./assets/icons/check.png";
+        if (btnImg) btnImg.src = "./assets/icons/copy.png";
 
         setTimeout(() => {
           if (btnImg) btnImg.src = "./assets/icons/copy.png";
