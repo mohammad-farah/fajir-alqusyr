@@ -775,7 +775,24 @@ nav div:nth-child(3) {
     }
 }
 
+
 /*
- SWITCHER 
+STACKHOLDERS
 */
+
+.stackholders {
+    color : gray;
+    text-align : center;
+    padding: 1vh 0 3vh 0;
+    font-size: 0.9rem;
+}
+
+.stackholders p:last-child {
+    font-size: 0.8rem;
+}
+
+.stackholders a {
+    color : black;
+    text-decoration: black underline 1px;
+}
 
