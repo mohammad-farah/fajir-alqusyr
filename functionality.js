@@ -98,7 +98,7 @@ function copyText(btn) {
         if (btnImg) btnImg.src = "./assets/icons/check.png";
 
         setTimeout(() => {
-          if (btnImg) btnImg.src = "./assets/imgs/copy.png";
+          if (btnImg) btnImg.src = "./assets/icons/copy.png";
           hidePopup(popUp);
         }, 1000);
       })
